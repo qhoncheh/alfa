@@ -5,11 +5,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        dir="rtl"
-        className="px-12 py-4 overflow-hidden h-screen flex flex-col w-full"
-      >
+      <body dir="rtl" className="px-12 py-4 overflow-x-hidden min-h-screen">
         {children}
+        <div id="modal-root"></div>
       </body>
     </html>
   );
