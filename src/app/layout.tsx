@@ -17,17 +17,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-
-      <body dir="rtl" className="px-12 py-4 overflow-x-hidden min-h-screen">
-
-        <header className="flex items-center justify-between w-full overflow-hidden">
-          <Header />
-        </header>
-        <main>{children}</main>
-        <footer className="rounded-3xl bg-[#F9F9F9] w-full px-7 py-8 flex flex-col gap-12">
-          <FooterContainer />
-        </footer>
-
+      <body dir="rtl" className="overflow-hidden min-h-screen">
+        {children}
         <div id="modal-root"></div>
       </body>
     </html>
