@@ -23,7 +23,7 @@ export default function LayoutRegister({
   buttonText,
 }: LayoutRegisterProps) {
   return (
-    <div className="w-full h-full border border-blue-500 flex justify-center items-center">
+    <div className="w-full h-full  flex justify-center items-center">
       <Form
         onHeaderActionClick={onHeaderActionClick}
         onGoogleLogin={onGoogleLogin}

@@ -3,7 +3,7 @@ import { Action } from "./components";
 
 export default function Slider() {
   return (
-    <div className="w-full hidden h-full border border-yellow-500 sm:flex p-3 relative">
+    <div className="w-full hidden h-full  sm:flex p-3 relative">
       <div
         style={{ backgroundImage: `url(${home1.src})` }}
         className="w-full h-full  rounded-2xl bg-no-repeat bg-cover bg-center flex flex-col items-end justify-end p-8 gap-6"
