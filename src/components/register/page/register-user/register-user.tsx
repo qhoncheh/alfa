@@ -5,7 +5,7 @@ import { Register } from "../..";
 
 export default function RegisterUser() {
   return (
-    <Register onHeaderActionClick={() => ""}>
+    <Register onHeaderActionClick={() => ""} buttonText="ثبت نام">
       <div className="flex flex-col gap-3 w-full">
         <Input
           className="input-register-style"

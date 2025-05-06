@@ -1,20 +1,29 @@
 "use client";
 
+import Link from "next/link";
 import React, { forwardRef, InputHTMLAttributes } from "react";
 
 type InputProps = {
   label?: string;
   errors?: string;
+  forgotPassword?: string;
 } & InputHTMLAttributes<HTMLInputElement>;
 
-const input = forwardRef<HTMLInputElement, InputProps>(
-  ({ errors, label, ...props }, ref) => {
+const Input = forwardRef<HTMLInputElement, InputProps>(
+  ({ forgotPassword, errors, label, ...props }, ref) => {
     return (
       <div className="w-full flex flex-col gap-3 relative">
         {label && (
-          <label className={`${errors ? "text-red-500" : "text-black"}`}>
-            {label}
-          </label>
+          <div className="w-full flex justify-between items-center">
+            <label className={`${errors ? "text-red-500" : "text-black"}`}>
+              {label}
+            </label>
+            {label === "رمزعبور" && forgotPassword && (
+              <Link href={forgotPassword} className="text-xs text-[#7575FE]">
+                {"رمزعبور خود را فراموش کرده اید؟"}
+              </Link>
+            )}
+          </div>
         )}
         <input ref={ref} {...props} />
         {errors && <small className="text-red-500">{errors}</small>}
@@ -23,6 +32,6 @@ const input = forwardRef<HTMLInputElement, InputProps>(
   }
 );
 
-input.displayName = "Input";
+Input.displayName = "Input";
 
-export default input;
+export default Input;

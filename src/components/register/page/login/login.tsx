@@ -12,6 +12,7 @@ export default function Login() {
       linkAddress="/login"
       linkText="ورود به حساب"
       text="حساب کاربری دارید؟"
+      buttonText="ورود به حساب"
     >
       <div className="flex flex-col gap-3 w-full">
         <Input
@@ -23,6 +24,7 @@ export default function Login() {
           className="input-register-style"
           label="رمزعبور"
           placeholder="رمزعبور خودرا وارد کنید"
+          forgotPassword="/forgotPassword"
         />
       </div>
     </Register>

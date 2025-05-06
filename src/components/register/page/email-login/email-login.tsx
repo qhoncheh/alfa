@@ -12,6 +12,7 @@ export default function EmailLogin() {
       linkAddress="/login"
       linkText="ورود به حساب"
       text="حساب کاربری دارید؟"
+      buttonText="ارسال کد تایید"
     >
       <Input
         className="input-register-style"

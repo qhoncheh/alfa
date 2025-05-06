@@ -9,6 +9,7 @@ type LayoutRegisterProps = {
   text?: string;
   linkText?: string;
   linkAddress?: string;
+  buttonText: string;
 };
 
 export default function LayoutRegister({
@@ -19,6 +20,7 @@ export default function LayoutRegister({
   text,
   linkAddress,
   linkText,
+  buttonText,
 }: LayoutRegisterProps) {
   return (
     <div className="w-full h-full border border-blue-500 flex justify-center items-center">
@@ -29,6 +31,7 @@ export default function LayoutRegister({
         linkAddress={linkAddress}
         text={text}
         linkText={linkText}
+        buttonText={buttonText}
       >
         {children}
       </Form>

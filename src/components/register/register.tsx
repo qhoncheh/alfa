@@ -8,6 +8,7 @@ type RegisterProps = {
   text?: string;
   linkText?: string;
   linkAddress?: string;
+  buttonText: string;
 };
 
 export default function Register({
@@ -18,6 +19,7 @@ export default function Register({
   linkAddress,
   linkText,
   text,
+  buttonText,
 }: RegisterProps) {
   return (
     <div className="w-full h-full flex">
@@ -28,6 +30,7 @@ export default function Register({
         text={text}
         linkAddress={linkAddress}
         linkText={linkText}
+        buttonText={buttonText}
       >
         {children}
       </LayoutRegister>

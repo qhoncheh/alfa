@@ -8,6 +8,7 @@ type FormProps = {
   text?: string;
   linkText?: string;
   linkAddress?: string;
+  buttonText: string;
 };
 
 export default function Form({
@@ -18,6 +19,7 @@ export default function Form({
   text,
   linkText,
   linkAddress,
+  buttonText,
 }: FormProps) {
   return (
     <div className="flex flex-col w-1/2 h-2/3 justify-center gap-12 items-center">
@@ -27,7 +29,12 @@ export default function Form({
         {children}
       </Main>
 
-      <Footer linkAddress={linkAddress} text={text} linkText={linkText} />
+      <Footer
+        linkAddress={linkAddress}
+        text={text}
+        linkText={linkText}
+        buttonText={buttonText}
+      />
     </div>
   );
 }
