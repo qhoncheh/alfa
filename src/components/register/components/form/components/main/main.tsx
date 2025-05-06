@@ -1,6 +1,6 @@
 import { Button } from "@/components/custom";
 import { GoogleIcon, AppleIcon } from "@/icons";
-const classNameBtn = "w-max px-11";
+const classNameBtn = "w-max px-5 sm:px-11";
 const classNameLine = "w-full text-[#F0F0F0]";
 
 type MainProps = {
@@ -15,10 +15,10 @@ export default function Main({
   children,
 }: MainProps) {
   return (
-    <main className="w-full flex flex-col gap-6">
+    <main className="w-full flex flex-col">
       {onAppleLogin && onGoogleLogin && (
-        <>
-          <div className="w-full flex items-center justify-between overflow-hidden ">
+        <div className="flex flex-col  gap-3 w-full ">
+          <div className="w-full flex items-center justify-between  ">
             <Button className={classNameBtn} onClick={onGoogleLogin}>
               <small>{"ورود با گوگل"}</small>
               <GoogleIcon />
@@ -33,7 +33,7 @@ export default function Main({
             <small>{"یا"}</small>
             <hr className={classNameLine} />
           </div>
-        </>
+        </div>
       )}
 
       {children}

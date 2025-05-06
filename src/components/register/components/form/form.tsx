@@ -22,7 +22,7 @@ export default function Form({
   buttonText,
 }: FormProps) {
   return (
-    <div className="flex flex-col w-1/2 h-2/3 justify-center gap-12 items-center">
+    <div className="flex flex-col w-full h-2/3 justify-center gap-12 items-center  xl:w-1/2 p-1">
       <Header onHeaderActionClick={onHeaderActionClick} />
 
       <Main onAppleLogin={onAppleLogin} onGoogleLogin={onGoogleLogin}>
