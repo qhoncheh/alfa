@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Header } from "@/components/Header";
-import FooterContainer from "@/components/Footer/footer";
+
 
 
 
@@ -17,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body dir="rtl" className="overflow-hidden min-h-screen">
+      <body dir="rtl" className="overflow-hidden h-screen flex flex-col">
         {children}
         <div id="modal-root"></div>
       </body>
