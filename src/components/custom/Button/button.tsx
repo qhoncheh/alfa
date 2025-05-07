@@ -1,10 +1,17 @@
 import React from "react";
-import { CustomButtonProps } from "../../../../types/types";
+
+
+
+export type CustomButtonProps = {
+  children: React.ReactNode;
+} & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
 const Button = ({ children, ...props }: CustomButtonProps) => {
-
   return (
-    <button className={`btn btn-gray-100 border-0 rounded-3xl w-20 h-12 text-sm ${props.className}`}>
+    <button
+      {...props}
+      className={`btn btn-gray-100 border-0 rounded-3xl w-20 h-12 text-sm ${props.className}`}
+    >
       {children}
     </button>
   );

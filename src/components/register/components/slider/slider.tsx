@@ -1,27 +1,41 @@
-import home1 from "@/images/home1.jpg";
-import { Action } from "./components";
-
+import { Action, Cart } from "./components";
+import { useEffect, useState } from "react";
+import { SLIDER_ITEMS } from "@/data";
 export default function Slider() {
+  const [current, setCurrent] = useState<number>(0);
+
+  const prevSide = () => {
+    setCurrent((prev) => (prev === 0 ? SLIDER_ITEMS.length - 1 : prev - 1));
+  };
+
+  const nextSide = () => {
+    setCurrent((prev) => (prev === SLIDER_ITEMS.length - 1 ? 0 : prev + 1));
+  };
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSide();
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, []);
   return (
-    <div className="w-full hidden h-full  sm:flex p-3 relative">
-      <div
-        style={{ backgroundImage: `url(${home1.src})` }}
-        className="w-full h-full  rounded-2xl bg-no-repeat bg-cover bg-center flex flex-col items-end justify-end p-8 gap-6"
-      >
-        <span>{`لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی`}</span>
-        <div className="flex items-center justify-between w-full gap-2">
-          <div className="flex items-center gap-2">
-            <div className="w-12 h-12 rounded-full bg-white" />
-            <div className="flex flex-col gap-1  ">
-              <span>{`پارسا آقایی`}</span>
-              <span className="text-[#E5E5E5]">{`12 مرداد 1403`}</span>
-            </div>
+    <div className="w-full hidden h-full  sm:flex p-3 relative overflow-hidden tes">
+      <div className="flex transition-transform duration-500 ease-in-out w-full h-full   overflow-hidden">
+        {SLIDER_ITEMS.map((item, index) => (
+          <div
+            style={{
+              transform: `translateX(${current * 100}%)`,
+            }}
+            key={index}
+            className="min-w-full h-full flex transition-transform duration-500 ease-in-out"
+          >
+            <Cart {...item} />
           </div>
-          <div className="flex items-center gap-3 absolute left-10">
-            <Action isRotate />
-            <Action />
-          </div>
-        </div>
+        ))}
+      </div>
+      <div className="flex items-center gap-3 absolute left-10 bottom-10">
+        <Action isRotate onClick={prevSide} />
+        <Action onClick={nextSide} />
       </div>
     </div>
   );
