@@ -10,7 +10,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         dir="rtl"
-        className="px-12 py-4 overflow-x-hidden min-h-screen overflow-y-auto"
+        className="overflow-x-hidden min-h-screen overflow-y-auto flex flex-col p-5"
       >
         <header className="flex items-center justify-between w-full overflow-hidden">
           <Header />

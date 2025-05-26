@@ -27,7 +27,7 @@ export default function LandingShinyAlpha() {
           قرار گیرد.
         </p>
       </div>
-      <div className="relative w-full lg:w-1/2 flex justify-center items-center border">
+      <div className="relative w-full lg:w-1/2 flex justify-center items-center ">
         <div className="absolute top-[10%] left-1/2 -z-10 w-[260px] aspect-square bg-[radial-gradient(circle,#7575FE50_0%,#7575FE50_80%,white_100%)] blur-[100px]" />
         <div className="absolute bottom-[10%] left-[10%] -z-10 w-[200px] aspect-square bg-[radial-gradient(circle,#7575fe96_0%,#7575fe96_50%,white_100%)] blur-[100px]" />
         <Image

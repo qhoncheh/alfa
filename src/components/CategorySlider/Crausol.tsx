@@ -39,7 +39,7 @@ const Carousel = ({
   if (!items.length) return null;
 
   return (
-    <div className={`relative w-full max-w-4xl mx-auto ${className}`}>
+    <div className={`relative w-full  mx-auto ${className}  p-3`}>
       <div className="relative overflow-hidden">
         <div className="flex gap-4 transition-transform duration-300 ease-in-out">
           {getVisibleItems().map((item, index) => (

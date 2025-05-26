@@ -4,7 +4,7 @@ import Modal from './Modal'
 
 const ImageHero = () => {
   return (
-    <div className="md:w-full md:h-[35.35rem] h-[20rem] md-[20rem] sm:flex-center rounded-2xl relative">
+    <div className="md:w-full md:h-[35.35rem] h-[20rem]  sm:flex-center rounded-2xl relative">
       <Image
         src="/hero.png"
         alt="Modern apartment building"
