@@ -10,7 +10,6 @@ const page = () => {
   return (
     <div>
       <HeroSection />
-      <LandingShinyAlpha />
       <div className="flex gap-8">
         <CategoryHelpText />
         <Carousel
@@ -23,6 +22,7 @@ const page = () => {
         />
       </div>
       <HotDealsSlider />
+      <LandingShinyAlpha />
     </div>
   );
 };
