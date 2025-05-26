@@ -1,9 +1,8 @@
-import React from 'react'
+import { HotDealsSlider } from "@/components/HotDealsSlider";
+import React from "react";
 
 const page = () => {
-  return (
-    <div>page</div>
-  )
-}
+  return <HotDealsSlider />;
+};
 
-export default page
+export default page;
