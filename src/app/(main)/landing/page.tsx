@@ -1,6 +1,7 @@
 import CategoryHelpText from "@/components/CategorySlider/categoryHelpText";
 import { HeroSection } from "@/components/HeroSection";
 import LandingShinyAlpha from "@/components/ShinyAlfa/shiny";
+import { HotDealsSlider } from "@/components/HotDealsSlider";
 import React from "react";
 import { propertyData } from "@/components/CategorySlider/data";
 import Carousel from "@/components/CategorySlider/Crausol";

@@ -1,7 +1,6 @@
-export default function EmailLogin() {
-  return (
-    <div>
-      <h1>Email Login</h1>
-    </div>
-  );
+"use client";
+import { EmailLogin } from "@/components/register";
+
+export default function EmailLoginPage() {
+  return <EmailLogin />;
 }
