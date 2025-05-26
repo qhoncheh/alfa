@@ -23,11 +23,13 @@ export default function Header({
   const [current, setCurrent] = useState<number>(currentIndex || 0);
 
   const prevSide = () => {
-    setCurrent((prev) => (prev === 0 ? SLIDER_ITEMS.length - 1 : prev - 1));
+    setCurrent((prev) => (prev === 0 ? 0 : prev - 1));
   };
 
   const nextSide = () => {
-    setCurrent((prev) => (prev === SLIDER_ITEMS.length - 1 ? 0 : prev + 1));
+    setCurrent((prev) =>
+      prev === SLIDER_ITEMS.length - 1 ? SLIDER_ITEMS.length - 1 : prev + 1
+    );
   };
 
   return (
