@@ -1,13 +1,14 @@
-import { SLIDER_ITEMS } from "@/data";
+import { Images } from "@/components/HotDealsSlider/models";
 
 type SliderProps = {
   current: number;
+  images: Images[];
 };
 
-export default function Slider({ current }: SliderProps) {
+export default function Slider({ current, images }: SliderProps) {
   return (
     <div className="w-full h-full flex overflow-hidden rounded-lg">
-      {SLIDER_ITEMS.map((item, index) => (
+      {images.map((item, index) => (
         <div
           key={index}
           style={{

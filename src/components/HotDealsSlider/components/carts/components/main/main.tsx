@@ -7,18 +7,34 @@ import {
   ParkingIcon,
 } from "@/icons";
 
-export default function Main() {
+type MainProps = {
+  currentIndex?: number;
+  id: number;
+  location: string;
+  bathroom: string;
+  yard: string;
+  bed: string;
+  parking: string;
+};
+
+export default function Main({
+  bathroom,
+  bed,
+  location,
+  parking,
+  yard,
+}: MainProps) {
   return (
     <div className="w-full grid grid-cols-2 gap-2">
       <TextWithIcon
         icon={<LocationIcon />}
-        text={`تهران,زعفرانیه`}
+        text={location}
         className="col-span-2"
       />
-      <TextWithIcon icon={<BathroomIcon />} text={`2 حمام`} />
-      <TextWithIcon icon={<YardIcon />} text={`حیاط دار`} />
-      <TextWithIcon icon={<BedIcon />} text={`4 خواب`} />
-      <TextWithIcon icon={<ParkingIcon />} text={`1 پارکینگ`} />
+      <TextWithIcon icon={<BathroomIcon />} text={bathroom} />
+      <TextWithIcon icon={<YardIcon />} text={yard} />
+      <TextWithIcon icon={<BedIcon />} text={bed} />
+      <TextWithIcon icon={<ParkingIcon />} text={parking} />
     </div>
   );
 }

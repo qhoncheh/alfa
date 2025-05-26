@@ -1,5 +1,6 @@
 import { Carts } from "./components";
 import { Button } from "../custom";
+import { HOT_DEALS_ITEMS } from "@/data";
 export default function HotDealsSlider() {
   return (
     <div className="w-full flex justify-center items-center  overflow-hidden flex-col p-5 gap-4 border">
@@ -8,10 +9,9 @@ export default function HotDealsSlider() {
         <Button className="w-max bg-[#7575FE]">مشاهده همه</Button>
       </div>
       <div className="grid grid-cols-4 gap-14 items-center justify-center w-full overflow-hidden ">
-        <Carts currentIndex={0} />
-        <Carts currentIndex={1} />
-        <Carts currentIndex={2} />
-        <Carts currentIndex={3} />
+        {HOT_DEALS_ITEMS.map((it, index) => (
+          <Carts key={index} {...it} currentIndex={index} />
+        ))}
       </div>
     </div>
   );

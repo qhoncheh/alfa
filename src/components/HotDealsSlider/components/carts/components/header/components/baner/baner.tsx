@@ -2,11 +2,16 @@
 import { useState } from "react";
 import { FaRegStar } from "react-icons/fa6";
 
-export default function Baner() {
+
+type BanerProps = {
+  banerTitle: string;
+};
+
+export default function Baner({ banerTitle }: BanerProps) {
   const [save, setSave] = useState<boolean>(false);
   return (
     <div className="flex justify-between">
-      <span className="text-sm font-semibold">{`آپارتمان لوکس زعفرانیه`}</span>
+      <span className="text-sm font-semibold">{banerTitle}</span>
       <FaRegStar
         size={20}
         onClick={() => setSave((prev) => !prev)}

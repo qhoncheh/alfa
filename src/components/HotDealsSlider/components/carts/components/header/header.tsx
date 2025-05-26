@@ -3,12 +3,23 @@ import { Action } from "@/components/register/components/slider/components";
 import { SLIDER_ITEMS } from "@/data";
 import { useState } from "react";
 import { Slider, Baner, Percents } from "./components";
+import { Images } from "@/components/HotDealsSlider/models";
 
 type HeaderProps = {
   currentIndex?: number;
+  likes?: number;
+  percent?: number;
+  images: Images[];
+  banerTitle: string;
 };
 
-export default function Header({ currentIndex }: HeaderProps) {
+export default function Header({
+  currentIndex,
+  images,
+  likes,
+  percent,
+  banerTitle,
+}: HeaderProps) {
   const [current, setCurrent] = useState<number>(currentIndex || 0);
 
   const prevSide = () => {
@@ -21,7 +32,7 @@ export default function Header({ currentIndex }: HeaderProps) {
 
   return (
     <div className="w-full flex flex-col gap-2 overflow-hidden relative">
-      <Percents />
+      {likes && percent && <Percents likes={likes} percent={percent} />}
       <div className="flex overflow-hidden">
         <div className="w-full absolute flex justify-between z-20 top-11">
           <Action
@@ -31,9 +42,9 @@ export default function Header({ currentIndex }: HeaderProps) {
           />
           <Action onClick={nextSide} className="!bg-slate-400/60 !w-9 !h-9 " />
         </div>
-        <Slider current={current} />
+        <Slider current={current} images={images} />
       </div>
-      <Baner />
+      <Baner banerTitle={banerTitle} />
     </div>
   );
 }
