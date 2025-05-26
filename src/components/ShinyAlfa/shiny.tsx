@@ -2,14 +2,12 @@ import Image from "next/image";
 import Pic from "../../../public/ShinyAlpha+10.png";
 import { Button } from "../custom";
 
-
 export default function LandingShinyAlpha() {
   return (
     <div className="w-full relative flex flex-col items-center lg:flex-row gap-6">
       <div className="w-fit lg:w-1/2 pr-6 flex flex-col gap-5">
         <Button
-          className=" border-1 border-[#7575FE] text-[#7575FE] !w-max hover:bg-white py-6 px-3"
-        >
+          className=" border-1 border-[#7575FE] text-[#7575FE] !w-max hover:bg-white py-6 px-3">
           آلفا درخشان
         </Button>
         <h1 className="w-fit font-bold text-3xl">
