@@ -2,7 +2,7 @@
 import { Action } from "@/components/register/components/slider/components";
 import { SLIDER_ITEMS } from "@/data";
 import { useState } from "react";
-import { Slider, Baner } from "./components";
+import { Slider, Baner, Percents } from "./components";
 
 type HeaderProps = {
   currentIndex?: number;
@@ -21,8 +21,9 @@ export default function Header({ currentIndex }: HeaderProps) {
 
   return (
     <div className="w-full flex flex-col gap-2 overflow-hidden relative">
+      <Percents />
       <div className="flex overflow-hidden">
-        <div className="w-full absolute flex justify-between z-20 top-10">
+        <div className="w-full absolute flex justify-between z-20 top-11">
           <Action
             isRotate
             onClick={prevSide}
