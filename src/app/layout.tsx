@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body dir="rtl" className="overflow-hidden min-h-screen">
+      <body dir="rtl" className=" min-h-screen">
         {children}
         <div id="modal-root"></div>
       </body>

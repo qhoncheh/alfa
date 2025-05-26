@@ -1,9 +1,14 @@
-import React from 'react'
+import { HeroSection } from "@/components/HeroSection";
+import LandingShinyAlpha from "@/components/ShinyAlfa/shiny";
+import React from "react";
 
 const page = () => {
   return (
-    <div>page</div>
-  )
-}
+    <div>
+      <HeroSection />
+      <LandingShinyAlpha />
+    </div>
+  );
+};
 
-export default page
+export default page;
