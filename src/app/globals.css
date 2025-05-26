@@ -7,3 +7,8 @@ body {
   font-family: 'Noto Sans Arabic', sans-serif;
   font-weight: 600;
 }
+
+
+.input-register-style {
+  @apply bg-[#F9F9F9] py-3 px-6 rounded-4xl text-[#898989]
+}

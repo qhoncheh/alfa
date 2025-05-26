@@ -1,0 +1,40 @@
+import { Header, Main, Footer } from "./components";
+
+type FormProps = {
+  children?: React.ReactNode;
+  onHeaderActionClick?: () => void;
+  onGoogleLogin?: () => void;
+  onAppleLogin?: () => void;
+  text?: string;
+  linkText?: string;
+  linkAddress?: string;
+  buttonText: string;
+};
+
+export default function Form({
+  children,
+  onHeaderActionClick,
+  onGoogleLogin,
+  onAppleLogin,
+  text,
+  linkText,
+  linkAddress,
+  buttonText,
+}: FormProps) {
+  return (
+    <div className="flex flex-col w-full h-2/3 justify-center gap-12 items-center  xl:w-1/2 p-1">
+      <Header onHeaderActionClick={onHeaderActionClick} />
+
+      <Main onAppleLogin={onAppleLogin} onGoogleLogin={onGoogleLogin}>
+        {children}
+      </Main>
+
+      <Footer
+        linkAddress={linkAddress}
+        text={text}
+        linkText={linkText}
+        buttonText={buttonText}
+      />
+    </div>
+  );
+}
