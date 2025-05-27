@@ -8,7 +8,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body dir="rtl" className="min-h-screen flex flex-col px-10 py-4">
+      <body
+        dir="rtl"
+        className="min-h-screen overflow-y-auto w-full flex flex-col justify-center items-center"
+      >
         <header className="flex items-center justify-between w-full">
           <Header />
         </header>

@@ -3,7 +3,8 @@ import React, { useState } from "react";
 import { FiChevronsLeft } from "react-icons/fi";
 import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 import Image from "next/image";
-import { CatCarouselItemWithIndex, CatCarouselProps } from "../DreamDestination/model";
+import { CatCarouselItemWithIndex, CatCarouselProps } from "./model";
+
 
 const Carousel = ({
   items = [],

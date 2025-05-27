@@ -1,9 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Header } from "@/components/Header";
-import FooterContainer from "@/components/Footer/footer";
-
-
 
 export const metadata: Metadata = {
   title: "ALFA",
@@ -17,7 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body dir="rtl" className=" h-screen flex flex-col">
+      <body dir="rtl" className=" h-screen flex flex-col p-2 px-5">
         {children}
         <div id="modal-root"></div>
       </body>
