@@ -1,18 +1,31 @@
+import { CSSProperties } from "react";
+
 type CartProps = {
   image: string;
   title: string;
   creator: string;
   date: string;
+  className?: string;
+  style?: CSSProperties;
 };
 
-export default function Cart({ image, title, creator, date }: CartProps) {
+export default function Cart({
+  image,
+  title,
+  creator,
+  date,
+  className,
+  style,
+}: CartProps) {
   return (
     <div
-      style={{ backgroundImage: `url(${image})` }}
-      className="w-full h-full  rounded-2xl bg-no-repeat bg-cover bg-center  flex-col items-end justify-end gap-6 overflow-hidden flex "
+      style={{ ...style, backgroundImage: `url(${image})` }}
+      className={`w-full h-full   bg-no-repeat bg-cover bg-center  flex-col items-end justify-end gap-6 overflow-hidden flex ${className}`}
     >
-      <div className="w-full h-full flex flex-col bg-slate-500/30 justify-end items-center gap-6 p-8">
-        <span>{title}</span>
+      <div
+        className={`w-full h-full flex flex-col bg-slate-500/30 justify-end items-center gap-6 p-8 rounded-2xl `}
+      >
+        <span className="text-justify">{title}</span>
 
         <div className="flex items-center gap-2   w-full">
           <div className="w-12 h-12 rounded-full bg-white" />

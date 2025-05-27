@@ -5,7 +5,7 @@ import { HotDealsSlider } from "@/components/HotDealsSlider";
 import React from "react";
 import { propertyData } from "@/components/CategorySlider/data";
 import Carousel from "@/components/CategorySlider/Crausol";
-
+import { Comments } from "@/components/comments";
 const page = () => {
   return (
     <div>
@@ -23,6 +23,7 @@ const page = () => {
       </div>
       <HotDealsSlider />
       <LandingShinyAlpha />
+      <Comments />
     </div>
   );
 };
