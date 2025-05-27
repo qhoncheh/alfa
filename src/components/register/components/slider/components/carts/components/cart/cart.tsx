@@ -1,5 +1,9 @@
 import { CSSProperties } from "react";
 
+
+type Styles = {
+  parentClassName?: string;
+};
 type CartProps = {
   image: string;
   title: string;
@@ -7,6 +11,7 @@ type CartProps = {
   date: string;
   className?: string;
   style?: CSSProperties;
+  styles?: Styles;
 };
 
 export default function Cart({
@@ -16,6 +21,7 @@ export default function Cart({
   date,
   className,
   style,
+  styles,
 }: CartProps) {
   return (
     <div
@@ -23,7 +29,7 @@ export default function Cart({
       className={`w-full h-full   bg-no-repeat bg-cover bg-center  flex-col items-end justify-end gap-6 overflow-hidden flex ${className}`}
     >
       <div
-        className={`w-full h-full flex flex-col bg-slate-500/30 justify-end items-center gap-6 p-8 rounded-2xl `}
+        className={`w-full h-full flex flex-col justify-end items-center bg-slate-500/30 gap-6 p-8 rounded-2xl ${styles?.parentClassName}`}
       >
         <span className="text-justify">{title}</span>
 
@@ -31,7 +37,7 @@ export default function Cart({
           <div className="w-12 h-12 rounded-full bg-white" />
           <div className="flex flex-col gap-1  ">
             <span>{creator}</span>
-            <span className="text-[#E5E5E5]">{date}</span>
+            <span className="">{date}</span>
           </div>
         </div>
       </div>

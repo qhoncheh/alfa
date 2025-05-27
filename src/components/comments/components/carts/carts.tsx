@@ -17,18 +17,18 @@ export default function Carts() {
     );
   };
   return (
-    <div className="flex h-96  w-full justify-center ">
-      <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
+    <div className="flex h-96  w-full justify-center  overflow-hidden ">
+      <div className="relative w-full h-full flex items-center justify-center overflow-hidden  ">
         {COMMENTS_ITEMS.map((it, index) => {
           const offset = index - current;
 
           let scale = 0.6;
-          let zIndex = -Math.abs(offset);
+
           let translateX = offset * 72;
 
           if (offset === 0) {
             scale = 0.8;
-            zIndex = 10;
+
             translateX = 0;
           }
 
@@ -39,10 +39,13 @@ export default function Carts() {
               title={it.exp}
               creator={it.sender}
               date={it.date}
-              className="absolute transition-all duration-500 ease-in-out !w-full md:!w-1/2 !p-2 !h-max "
+              styles={{
+                parentClassName: "!bg-slate-500/60 border-4 border-black",
+              }}
+              className="absolute transition-all duration-500 ease-in-out !w-full md:!w-1/2 !p-2 !h-max  z-20"
               style={{
                 transform: `translateX(${translateX}%) scale(${scale}) `,
-                zIndex,
+
                 rotate: `${offset * 8}deg`,
               }}
             />
