@@ -26,17 +26,3 @@ export function useDarkMode() {
 
     return [isDark, setIsDark] as const
 }
-
-// استفاده:
-// export function DarkModeToggle() {
-//     const [isDark, setIsDark] = DarkMode()
-
-//     return (
-//         <button
-//             onClick={() => setIsDark(!isDark)}
-//             className="p-2 rounded bg-gray-200 dark:bg-gray-800"
-//         >
-//             {isDark ? 'Light Mode' : 'Dark Mode'}
-//         </button>
-//     )
-// }
