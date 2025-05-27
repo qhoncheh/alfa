@@ -42,7 +42,7 @@ export default function Carts() {
               styles={{
                 parentClassName: "!bg-slate-100 border-4 border-[#7575FE]",
               }}
-              className="absolute transition-all duration-500 ease-in-out !w-full md:!w-1/2 !p-2 !h-max  z-20"
+              className="absolute transition-all duration-500 ease-in-out !w-full md:!w-1/2  !h-max  z-20 shadow-2xl shadow-slate-500 rounded-2xl"
               style={{
                 transform: `translateX(${translateX}%) scale(${scale}) `,
 
