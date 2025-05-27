@@ -26,7 +26,7 @@ const Carts = ({ price,currentIndex,banerTitle ,images,...props}: CarstProps) =>
       />
       <Main {...props} />
       <div className="flex items-center gap-2">
-        <span>{`${price} تومان`}</span>
+        <span className="text-slate-100">{`${price} تومان`}</span>
       </div>
     </div>
   );

@@ -7,6 +7,7 @@ import { propertyData } from "@/components/CategorySlider/data";
 import Carousel from "@/components/CategorySlider/Crausol";
 import DreamSection from "@/components/DreamDestination";
 
+import { Comments } from "@/components/comments";
 const page = () => {
   return (
     <div>
@@ -23,6 +24,7 @@ const page = () => {
       <DreamSection />
       <LandingShinyAlpha />
       <HotDealsSlider />
+      <Comments />
     </div>
   );
 };

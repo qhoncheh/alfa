@@ -12,7 +12,7 @@ export default function TextWithIcon({
   return (
     <div className={`flex items-center gap-2 ${className}`}>
       {icon}
-      <small className="text-xs">{text}</small>
+      <small className="text-xs text-slate-100">{text}</small>
     </div>
   );
 }
