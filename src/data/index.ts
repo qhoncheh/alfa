@@ -95,6 +95,66 @@ export const HOT_DEALS_ITEMS: ItemShowCaseType[] = [
   },
 ];
 
+
+export const SEASONAL_DEALS_ITEMS: ItemShowCaseType[] = [
+  {
+    id: 1,
+    banerTitle: "آپارتمان لوکس زعفرانیه",
+    location: "تهران,زعفرانیه",
+    bathroom: "2 حمام",
+    yard: "حیاط دار",
+    bed: "4 خواب",
+    parking: "1 پارکینگ",
+    images: IMAGES,
+    price: "100،500،000",
+    likes: 4.5,
+    percent: 15,
+    off: "2،500،000",
+  },
+  {
+    id: 2,
+    banerTitle: "آپارتمان لوکس زعفرانیه",
+    location: "تهران,زعفرانیه",
+    bathroom: "2 حمام",
+    yard: "حیاط دار",
+    bed: "4 خواب",
+    parking: "1 پارکینگ",
+    images: IMAGES,
+    price: "100،500،000",
+    likes: 4.5,
+    percent: 15,
+    off: "2،500،000",
+  },
+  {
+    id: 3,
+    banerTitle: "آپارتمان لوکس زعفرانیه",
+    location: "تهران,زعفرانیه",
+    bathroom: "2 حمام",
+    yard: "حیاط دار",
+    bed: "4 خواب",
+    parking: "1 پارکینگ",
+    images: IMAGES,
+    price: "100،500،000",
+    likes: 4.5,
+    percent: 15,
+    off: "2،500،000",
+  },
+  {
+    id: 4,
+    banerTitle: "آپارتمان لوکس زعفرانیه",
+    location: "تهران,زعفرانیه",
+    bathroom: "2 حمام",
+    yard: "حیاط دار",
+    bed: "4 خواب",
+    parking: "1 پارکینگ",
+    images: IMAGES,
+    price: "100،500،000",
+    likes: 4.5,
+    percent: 15,
+    off: "2،500،000",
+  },
+];
+
 export const COMMENTS_ITEMS: CommentsItemType[] = [
   {
     id: 1,

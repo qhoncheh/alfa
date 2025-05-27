@@ -22,6 +22,8 @@ const Carts = ({
   currentIndex,
   banerTitle,
   images,
+  likes,
+  percent,
   off,
   ...props
 }: CarstProps) => {
@@ -31,6 +33,8 @@ const Carts = ({
         currentIndex={currentIndex}
         images={images}
         banerTitle={banerTitle}
+        likes={likes}
+        percent={percent}
       />
       <Main {...props} />
       <div className="flex items-center gap-2">
