@@ -10,7 +10,7 @@ export function ThemeToggle() {
     return (
         <Button
             onClick={() => setIsDark(!isDark)}
-            className=" w-max border-gray-300 border-1 dark:bg-black text-black dark:text-white transition-colors duration-300"
+            className=" w-max border-gray-300 border-1 dark:b-black text-black dark:text-white transition-colors duration-300"
         >
             {isDark ? <MdOutlineDarkMode size={25} /> : <CiLight size={25} />}
         </Button>
