@@ -26,7 +26,7 @@ export default function Cart({
   return (
     <div
       style={{ ...style, backgroundImage: `url(${image})` }}
-      className={`w-full h-full   bg-no-repeat bg-cover bg-center  flex-col items-end justify-end gap-6 overflow-hidden flex ${className}`}
+      className={`w-full h-full   bg-no-repeat bg-cover bg-center  flex-col items-end justify-end gap-6 overflow-hidden flex  ${className}`}
     >
       <div
         className={`w-full h-full flex flex-col justify-end items-center bg-slate-500/30 gap-6 p-8 rounded-2xl ${styles?.parentClassName}`}
