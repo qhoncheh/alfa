@@ -4,13 +4,13 @@ import { propertyData } from './data';
 
 const CatCraosel = () => {
   return (
-    <div className="flex gap-8">
+    <div className="flex gap-8 border-2  border-dashed border-[#BABAFF]">
       <CategoryHelpText />
       <Carousel
         items={propertyData}
         showNavigation={true}
         showDots={true}
-        // autoPlay={false}
+        autoPlay={false}
         autoPlayInterval={5000}
         className="mb-12"
       />

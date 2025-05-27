@@ -12,8 +12,8 @@ const page = () => {
   return (
     <div className="flex flex-col bg-black  px-5 items-center w-full h-full gap-12">
       <HeroSection />
-      <div className="flex gap-8">
-        <CategoryHelpText/>
+      <div className="flex gap-8 border-2 rounded-2xl !border-dashed !border-[#BABAFF] p-4">
+        <CategoryHelpText />
         <Carousel
           items={propertyData}
           showNavigation={true}

@@ -3,7 +3,7 @@ import { Button } from "../custom";
 import { HOT_DEALS_ITEMS } from "@/data";
 export default function HotDealsSlider() {
   return (
-    <div className="w-full flex justify-center items-center  overflow-hidden flex-col  gap-4 border-2 border-dashed border-slate-300 rounded-2xl p-8">
+    <div className="w-full flex justify-center items-center  overflow-hidden flex-col  gap-4 border-2 border-dashed border-[#BABAFF] rounded-2xl p-8">
       <div className="flex justify-between w-full items-center">
         <div className="flex flex-col gap-2">
           <Button className="w-max !border !border-[#7575FE] bg-transparent !text-[#7575FE]">

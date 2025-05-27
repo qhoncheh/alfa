@@ -6,13 +6,15 @@ import { propertyData } from './data';
 
 export default function DreamSection() {
   return (
-    <div className="rounded-3xl flex flex-row  justify-between bg-[#F9F9F9] p-14 relative ml-2">
+    <div className="rounded-3xl flex flex-row  justify-between  p-14 relative ml-2 border-2 border-dashed border-[#BABAFF]">
       <DreamSectionTop />
       <div className=" mt-12">
-        <Carousel  items={propertyData}
-                  showNavigation={true}
-                  showDots={true}
-                  className="mb-12" />
+        <Carousel
+          items={propertyData}
+          showNavigation={true}
+          showDots={true}
+          className="mb-12"
+        />
       </div>
     </div>
   );
