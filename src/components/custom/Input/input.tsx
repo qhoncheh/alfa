@@ -14,11 +14,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
   ({ forgotPassword, errors, label, icon, ...props }, ref) => {
     return (
       <div className="w-full flex flex-col gap-3 relative">
-        {icon && (
-          <div className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500">
-            {icon}
-          </div>
-        )}
+
         {label && (
           <div className="w-full flex justify-between items-center">
             <label className={`${errors ? "text-red-500" : "text-black"}`}>
@@ -31,7 +27,14 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
             )}
           </div>
         )}
+        <div className="relative  !w-max">
+          {icon && (
+            <div className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500">
+              {icon}
+            </div>
+          )}
         <input ref={ref} {...props} />
+        </div>
         {errors && <small className="text-red-500">{errors}</small>}
       </div>
     );
