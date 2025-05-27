@@ -10,7 +10,7 @@ import DreamSection from "@/components/DreamDestination";
 import { Comments } from "@/components/comments";
 const page = () => {
   return (
-    <div>
+    <div className="flex flex-col items-center w-full h-full gap-12">
       <HeroSection />
       <div className="flex gap-8">
         <CategoryHelpText />

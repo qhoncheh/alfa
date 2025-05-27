@@ -18,7 +18,7 @@ type CarstProps = {
 
 const Carts = ({ price,currentIndex,banerTitle ,images,...props}: CarstProps) => {
   return (
-    <div className="w- min-h-64  flex flex-col gap-5 p-2 ">
+    <div className=" min-h-64  flex flex-col gap-5 p-4 border border-slate-200 rounded-2xl">
       <Header
         currentIndex={currentIndex}
         images={images}
