@@ -11,7 +11,7 @@ export default function Baner({ banerTitle }: BanerProps) {
   const [save, setSave] = useState<boolean>(false);
   return (
     <div className="flex justify-between">
-      <span className="text-sm font-semibold">{banerTitle}</span>
+      <span className="text-sm font-semibold text-slate-100">{banerTitle}</span>
       <FaRegStar
         size={20}
         onClick={() => setSave((prev) => !prev)}
