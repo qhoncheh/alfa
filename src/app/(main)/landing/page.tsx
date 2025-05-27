@@ -20,9 +20,9 @@ const page = () => {
           className="mb-12"
         />
       </div>
-      <HotDealsSlider />
-      <LandingShinyAlpha />
       <DreamSection />
+      <LandingShinyAlpha />
+      <HotDealsSlider />
     </div>
   );
 };
