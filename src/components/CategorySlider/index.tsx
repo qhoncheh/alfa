@@ -4,7 +4,7 @@ import { propertyData } from './data';
 
 const CatCraosel = () => {
   return (
-    <div className="flex gap-8 border-2  border-dashed border-[#BABAFF]">
+    <div className="flex gap-8 border-2  border-dashed border-[#7575FE]">
       <CategoryHelpText />
       <Carousel
         items={propertyData}

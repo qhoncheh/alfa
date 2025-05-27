@@ -6,7 +6,7 @@ import { propertyData } from './data';
 
 export default function DreamSection() {
   return (
-    <div className="rounded-3xl flex flex-row  justify-between  p-14 relative ml-2 border-2 border-dashed border-[#BABAFF]">
+    <div className="rounded-3xl flex flex-row  justify-between  p-14 relative ml-2 border-2 border-dashed border-[#7575FE]">
       <DreamSectionTop />
       <div className=" mt-12">
         <Carousel

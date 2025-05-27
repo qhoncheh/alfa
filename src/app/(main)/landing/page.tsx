@@ -13,9 +13,8 @@ const page = () => {
   return (
     <div className="flex flex-col bg-black  px-5 items-center w-full h-full gap-12">
       <HeroSection />
-      <SeasonalDeals />
-      
-      <div className="flex gap-8 border-2 rounded-2xl !border-dashed !border-[#BABAFF] p-4">
+
+      <div className="flex gap-8 border-2 rounded-2xl !border-dashed !border-[#7575FE] p-4">
         <CategoryHelpText />
         <Carousel
           items={propertyData}
@@ -24,6 +23,7 @@ const page = () => {
           className="mb-12"
         />
       </div>
+      <SeasonalDeals />
       <DreamSection />
       <LandingShinyAlpha />
       <HotDealsSlider />
