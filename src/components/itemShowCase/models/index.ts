@@ -3,7 +3,7 @@ export type Images = {
   image: string;
 };
 
-export type HotDealsType = {
+export type ItemShowCaseType = {
   id: number;
   banerTitle: string;
   likes?: number;
