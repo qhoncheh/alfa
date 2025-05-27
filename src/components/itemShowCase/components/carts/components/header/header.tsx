@@ -3,7 +3,8 @@ import { Action } from "@/components/register/components/slider/components";
 import { SLIDER_ITEMS } from "@/data";
 import { useState } from "react";
 import { Slider, Baner, Percents } from "./components";
-import { Images } from "@/components/HotDealsSlider/models";
+import { Images } from "@/components/itemShowCase/models";
+
 
 type HeaderProps = {
   currentIndex?: number;

@@ -15,4 +15,5 @@ export type ItemShowCaseType = {
   parking: string;
   images: Images[];
   price: string;
+  off?: string;
 };
