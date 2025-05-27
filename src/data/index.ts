@@ -1,5 +1,5 @@
 import { CartSliderType } from "@/components/register/models";
-import { HotDealsType, Images } from "@/components/HotDealsSlider/models";
+import { ItemShowCaseType, Images } from "@/components/itemShowCase/models";
 import { CommentsItemType } from "@/components/comments/models";
 import home1 from "@/images/home1.jpg";
 import home2 from "@/images/home2.jpg";
@@ -48,7 +48,7 @@ const IMAGES: Images[] = [
   { id: 5, image: home5.src },
 ];
 
-export const HOT_DEALS_ITEMS: HotDealsType[] = [
+export const HOT_DEALS_ITEMS: ItemShowCaseType[] = [
   {
     id: 1,
     banerTitle: "آپارتمان لوکس زعفرانیه",
