@@ -1,8 +1,11 @@
-import React from 'react'
+import Rent from "@/components/custom/Rent-navigation"
+
 
 const Rentpage = () => {
   return (
-    <div>page</div>
+      <div>
+          <Rent />
+    </div>
   )
 }
 
