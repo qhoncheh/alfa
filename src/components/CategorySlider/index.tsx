@@ -1,4 +1,4 @@
-import CategoryHelpText from './categoryHelpText';
+import CategoryHelpText from './categoryText';
 import Carousel from './Crausol';
 import { propertyData } from './data';
 
