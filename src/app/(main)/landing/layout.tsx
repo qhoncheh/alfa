@@ -15,8 +15,8 @@ export default function RootLayout({
         <header className="flex items-center justify-between w-full">
           <Header />
         </header>
-        <main className="flex-1">{children}</main>
-        <footer className="rounded-3xl bg-[#F9F9F9] w-full px-7 py-8 flex flex-col gap-12">
+        <main className="flex-1 bg-black">{children}</main>
+        <footer className=" bg-black w-full px-7 py-8 flex flex-col gap-12">
           <FooterContainer />
         </footer>
 

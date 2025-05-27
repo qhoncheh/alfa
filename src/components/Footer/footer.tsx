@@ -9,10 +9,10 @@ import TextFooter from "./text-footer";
 export default function FooterContainer() {
   return (
     <>
-      <Image src={Logo.src} alt="Logo" width={96} height={96} />
+      <Image src={Logo.src} alt="Logo" width={96} height={96} bg-white/>
       <TextFooter />
       <div className="flex gap-3">
-        <div className="p-2 rounded-2xl bg-white">
+        <div className="p-2 rounded-2xl bg-black">
           <Image src={FootPic1.src} alt="1" width={48} height={48} />
         </div>
         <div className="p-2 rounded-2xl bg-black">
