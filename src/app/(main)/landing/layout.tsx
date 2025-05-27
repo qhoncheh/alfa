@@ -10,9 +10,9 @@ export default function RootLayout({
     <html lang="en">
       <body
         dir="rtl"
-        className="overflow-x-hidden min-h-screen overflow-y-auto flex flex-col p-5"
+        className="min-h-screen overflow-y-auto w-full flex flex-col justify-center items-center"
       >
-        <header className="flex items-center justify-between w-full overflow-hidden">
+        <header className="flex items-center justify-between w-full">
           <Header />
         </header>
         <main>{children}</main>
