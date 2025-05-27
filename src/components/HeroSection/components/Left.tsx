@@ -3,7 +3,7 @@ import StatCard from './Cards'
 
 const TextHero = () => {
   return (
-    <div className=" h-full w-full text-black dark:text-white  flex flex-col items-center">
+    <div className=" h-full w-full text-white  flex flex-col items-center">
       <div className="w-full flex justify-end flex-col">
         <h4 className="md:text-4xl text-2xl pr-8 pt-6">
           خانه ای که میخوای،

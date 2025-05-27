@@ -10,10 +10,10 @@ import DreamSection from "@/components/DreamDestination";
 import { Comments } from "@/components/comments";
 const page = () => {
   return (
-    <div className="flex flex-col items-center w-full h-full gap-12">
+    <div className="flex flex-col bg-black  px-5 items-center w-full h-full gap-12">
       <HeroSection />
       <div className="flex gap-8">
-        <CategoryHelpText />
+        <CategoryHelpText/>
         <Carousel
           items={propertyData}
           showNavigation={true}

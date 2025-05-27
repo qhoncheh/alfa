@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import { ThemeProvider } from 'next-themes'
 
 export const metadata: Metadata = {
   title: 'ALFA',
@@ -14,16 +13,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body dir="rtl" className="{inter.className} bg-black h-screen flex flex-col p-2 px-5">
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
+      <body dir="rtl" className="{inter.className} bg-black h-screen flex flex-col ">
+  
           {children}
           <div id="modal-root"></div>
-        </ThemeProvider>
+      
       </body>
     </html>
   )

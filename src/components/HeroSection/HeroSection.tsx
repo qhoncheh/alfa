@@ -4,7 +4,7 @@ import TextHero from './components/Left'
 
 const HeroSection = () => {
   return (
-    <div className="w-full h-[600px] flex  gap-12 ">
+    <div className="w-full bg-black h-[600px] flex  gap-12 ">
       <ImageHero />
       <TextHero />
     </div>

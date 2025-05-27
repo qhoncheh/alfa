@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { Button } from "../custom";
-import { ThemeToggle } from "../custom/theme-toggle/theme";
+// import { ThemeToggle } from "../custom/theme-toggle/theme";
 
 export default function Header() {
   return (
@@ -10,7 +10,7 @@ export default function Header() {
       <aside className="lg:flex items-center gap-4">
         <Button className="bg-slate-800 text-white h-12 flex items-center gap-2 "
         >
-          <div className="rounded-full w-2 h-2 dark:bg-black"
+          <div className="rounded-full w-2 h-2 "
 
           ></div>
           خانه
@@ -19,7 +19,7 @@ export default function Header() {
         >مقالات</Button>
         <Button className="bg-slate-800 text-white w-28"
         >درباره آلفا</Button>
-        <ThemeToggle />
+        {/* <ThemeToggle /> */}
       </aside>
       <Image src="/AlFA.png" alt="Logo" width={78} height={78} />
       <aside className="lg:flex items-center gap-4">
