@@ -14,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body dir="rtl" className="{inter.className} gap-8  h-screen flex flex-col p-2 px-5">
+      <body dir="rtl" className="{inter.className}  h-screen flex flex-col p-2 px-5">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
