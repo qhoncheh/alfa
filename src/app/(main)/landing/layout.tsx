@@ -8,14 +8,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        dir="rtl"
-        className="overflow-x-hidden min-h-screen overflow-y-auto flex flex-col p-5"
-      >
-        <header className="flex items-center justify-between w-full overflow-hidden">
+      <body dir="rtl" className="min-h-screen flex flex-col px-10 py-4">
+        <header className="flex items-center justify-between w-full">
           <Header />
         </header>
-        <main>{children}</main>
+        <main className="flex-1">{children}</main>
         <footer className="rounded-3xl bg-[#F9F9F9] w-full px-7 py-8 flex flex-col gap-12">
           <FooterContainer />
         </footer>
