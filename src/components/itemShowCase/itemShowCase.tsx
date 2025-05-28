@@ -24,7 +24,16 @@ export default function ItemShowCase({
             {baner}
           </Button>
           <div className="flex flex-col gap-2">
-            <span className="text-2xl text-slate-100">{title}</span>
+            <span
+              className="text-2xl text-slate-100"
+              data-aos="zoom-in"
+              data-aos-delay="300"
+              data-aos-duration="1000"
+            >
+              {title}
+            </span>
+
+
             {offTime && (
               <div className="flex items-center gap-3">
                 <Button className="w-max !border flex items-center gap-2 !bg-[#FF5555]  !text-white">
