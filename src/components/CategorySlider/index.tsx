@@ -10,7 +10,6 @@ const CatCraosel = () => {
         items={propertyData}
         showNavigation={true}
         showDots={true}
-        className="mb-12"
       />
     </div>
   );

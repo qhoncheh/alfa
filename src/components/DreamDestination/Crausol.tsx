@@ -1,15 +1,11 @@
 "use client";
-import React, { useState } from "react";
-import { FiChevronsLeft } from "react-icons/fi";
-import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { CatCarouselItemWithIndex, CatCarouselProps } from "./model";
-
+import { CatCarouselItemWithIndex, CatCarouselProps } from "../DreamDestination/model";
 
 const Carousel = ({
   items = [],
   className = "",
-  showNavigation = true,
   showDots = true,
 }: CatCarouselProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -18,13 +14,19 @@ const Carousel = ({
     setCurrentIndex(index);
   };
 
-  const goToPrevious = () => {
-    setCurrentIndex((prev) => (prev - 1 + items.length) % items.length);
-  };
+  useEffect(() => {
+    if (items.length <= 3) return;
 
-  const goToNext = () => {
-    setCurrentIndex((prev) => (prev + 1) % items.length);
-  };
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => {
+        const nextIndex = (prevIndex + 1) % items.length;
+        console.log("Slide changed from", prevIndex, "to", nextIndex);
+        return nextIndex;
+      });
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [items.length]);
 
   const getVisibleItems = (): CatCarouselItemWithIndex[] => {
     if (items.length <= 3) return items.map((item, idx) => ({ ...item, originalIndex: idx }));
@@ -40,34 +42,31 @@ const Carousel = ({
   if (!items.length) return null;
 
   return (
-    <div className={`relative w-full  mx-auto ${className}  p-3`}>
-      <div className="relative overflow-hidden">
-        <div className="flex gap-4 transition-transform duration-300 ease-in-out">
-          {getVisibleItems().map((item: CatCarouselItemWithIndex, index: number) => (
+    <div className={`relative w-full max-w-[900px] mx-auto ${className} p-3`}>
+      <div className="relative overflow-hidden w-full">
+        <div className="flex gap-4 transition-transform duration-300 ease-in-out w-full">
+          {getVisibleItems().map((item: CatCarouselItemWithIndex) => (
             <div
-              key={`${item.originalIndex || index}-${currentIndex}`}
+              key={`${item.originalIndex}-${currentIndex}`}
               className="flex-shrink-0 w-1/3 min-w-0"
+              style={{ minWidth: "33.3333%" }}
             >
               <div className="relative group cursor-pointer rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <div className="relative h-48 bg-gray-200 overflow-hidden">
                   <Image
                     src={item.image}
                     alt={item.title}
-                    width={400}
+                    width={300}
                     height={300}
-                    priority
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    // className="h-full object-cover"
                   />
-
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
                   <div className="absolute bottom-4 left-4 right-4">
                     <h3 className="text-white text-lg font-semibold drop-shadow-lg">
                       {item.title}
                     </h3>
                     {item.subtitle && (
-                      <p className="text-white/80 text-sm mt-1 drop-shadow">
-                        {item.subtitle}
-                      </p>
+                      <p className="text-white/80 text-sm mt-1 drop-shadow">{item.subtitle}</p>
                     )}
                   </div>
                 </div>
@@ -77,34 +76,16 @@ const Carousel = ({
         </div>
       </div>
 
-      {showNavigation && items.length > 3 && (
-        <>
-          <button
-            onClick={goToPrevious}
-            className="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full shadow-lg flex items-center justify-center text-gray-700 hover:bg-white hover:shadow-xl transition-all duration-200 z-10"
-          >
-            <FiChevronsLeft size="20" />
-          </button>
-          <button
-            onClick={goToNext}
-            className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full shadow-lg flex items-center justify-center text-gray-700 hover:bg-white hover:shadow-xl transition-all duration-200 z-10"
-          >
-            <MdOutlineKeyboardDoubleArrowRight size="20" />
-          </button>
-        </>
-      )}
-
       {showDots && items.length > 3 && (
         <div className="flex justify-center space-x-2 mt-6">
-          {items.map((_: typeof items[0], index: number) => (
+          {items.map((_, index: number) => (
             <button
               key={index}
               onClick={() => goToSlide(index)}
-              className={`w-2 h-2 rounded-full transition-all duration-200 ${
-                index === currentIndex
-                  ? "bg-blue-500 w-6"
-                  : "bg-gray-300 hover:bg-gray-400"
-              }`}
+              className={`w-6 h-2 rounded-full transition-colors duration-200 transform ${index === currentIndex ? "bg-blue-500 scale-125" : "bg-gray-300 hover:bg-gray-400 scale-100"
+                }`}
+              style={{ flexShrink: 0 }}
+              aria-label={`Slide ${index + 1}`}
             />
           ))}
         </div>
@@ -112,4 +93,5 @@ const Carousel = ({
     </div>
   );
 };
+
 export default Carousel;

@@ -15,7 +15,7 @@ const page = () => {
     <div className="flex flex-col bg-black  px-5 items-center w-full h-full gap-24">
       <HeroSection />
 
-      <div className="flex gap-8 border-2 rounded-2xl !border-dashed !border-[#7575FE] p-4">
+      <div className="flex gap-8 border-2 rounded-2xl !border-dashed !border-[#7575FE] p-10">
         <CategoryHelpText />
         <Carousel
           items={propertyData}
