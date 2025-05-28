@@ -22,14 +22,14 @@ export default function CategoryHelpText() {
       <Button
         className="text-[#7575FE] bg-black w-max border-1 border-[#7575FE]"
         data-aos="fade-down"
-        data-aos-delay="400"
+        data-aos-delay="300"
       >
         دسته بندی
       </Button>
       <p
         className="text-3xl text-white font-bold"
         data-aos="fade-up"
-        data-aos-delay="400"
+        data-aos-delay="300"
       >
         هر ملکی بخوای
         <br />
@@ -38,7 +38,7 @@ export default function CategoryHelpText() {
       <p
         className="text-[#a59595]"
         data-aos="fade-in"
-        data-aos-delay="800"
+        data-aos-delay="300"
       >
         با کلیک به روی هر دسته بندی می توانید تمام آگهی
         <br />
