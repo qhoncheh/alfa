@@ -12,7 +12,7 @@ import DreamSection from "@/components/DreamDestination";
 
 const page = () => {
   return (
-    <div className="flex flex-col bg-black  px-5 items-center w-full h-full gap-12">
+    <div className="flex flex-col bg-black  px-5 items-center w-full h-full gap-24">
       <HeroSection />
 
       <div className="flex gap-8 border-2 rounded-2xl !border-dashed !border-[#7575FE] p-4">
