@@ -1,35 +1,43 @@
-import React from "react";
-import Image from "next/image";
+"use client";
+import React, { useState } from "react";
 import { Button } from "../custom";
-// import { ThemeToggle } from "../custom/theme-toggle/theme";
+import { LINK_ITEMS } from "./data";
+import { CustomLink } from "./components";
 
 export default function Header() {
-  return (
-    <header className="flex items-center justify-between bg-black w-full px-5 py-4"
-    >
-      <aside className="lg:flex items-center gap-4">
-        <Button className="bg-slate-800 text-white h-12 flex items-center gap-2 "
-        >
-          <div className="rounded-full w-2 h-2 "
+  const [activeLink, setActiveLink] = useState<number>(5);
+  const leftLinks = [LINK_ITEMS[2], LINK_ITEMS[3], LINK_ITEMS[4]];
+  const rightLinks = [LINK_ITEMS[0], LINK_ITEMS[1]];
 
-          ></div>
-          خانه
-        </Button>
-        <Button className="bg-slate-800 text-white"
-        >مقالات</Button>
-        <Button className="bg-slate-800 text-white w-28"
-        >درباره آلفا</Button>
-        {/* <ThemeToggle /> */}
-      </aside>
-      <Image src="/AlFA.png" alt="Logo" width={78} height={78} />
-      <aside className="lg:flex items-center gap-4">
-        <Button className="bg-slate-800 text-white w-max"
-        >رهن و اجاره</Button>
-        <Button className="bg-slate-800 text-white w-28"
-        >رزرو سریع</Button>
-        <Button className="bg-[#7575FE] text-white w-32">
-          ثبت نام / ورود
-        </Button>
+  return (
+    <header className="flex items-center justify-between bg-black w-full px-5 py-4">
+      <aside className="lg:flex items-center gap-4  w-full">
+        <div className="flex w-full justify-between items-center text-slate-100">
+          <div className="flex items-center gap-3 flex-row-reverse">
+            {leftLinks.map((item, index) => (
+              <CustomLink
+                key={index}
+                onClick={() => setActiveLink(item.id)}
+                link={item.link}
+                text={item.text}
+                isActive={activeLink === item.id}
+              />
+            ))}
+          </div>
+          <h1>AlFA</h1>
+          <div className="flex items-center gap-3 flex-row-reverse">
+            {rightLinks.map((item, index) => (
+              <CustomLink
+                key={index}
+                onClick={() => setActiveLink(item.id)}
+                link={item.link}
+                text={item.text}
+                isActive={activeLink === item.id}
+              />
+            ))}
+          </div>
+        </div>
+        <Button className="bg-[#7575FE] text-white w-32">ثبت نام / ورود</Button>
       </aside>
     </header>
   );
