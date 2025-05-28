@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import AOSInit from '@/components/Aos-init'
+
 
 export const metadata: Metadata = {
   title: 'ALFA',
@@ -14,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body dir="rtl" className="{inter.className} bg-black h-screen flex flex-col ">
-  
+          <AOSInit />
           {children}
           <div id="modal-root"></div>
       
