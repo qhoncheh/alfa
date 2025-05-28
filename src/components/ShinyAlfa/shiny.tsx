@@ -4,7 +4,7 @@ import { Button } from "../custom";
 
 export default function LandingShinyAlpha() {
   return (
-    <div className="w-full relative flex flex-col items-center lg:flex-row gap-6">
+    <div className="w-full relative flex flex-col items-center lg:flex-row gap-6 pr-8">
       <div
         className="w-fit lg:w-1/2 flex flex-col gap-5"
         data-aos="fade-right"
@@ -12,7 +12,7 @@ export default function LandingShinyAlpha() {
         data-aos-delay="200"
       >
         <Button
-          className="border-1 border-[#7575FE] text-[#7575FE] !w-max hover:bg-white py-6 px-3"
+          className="border-1 border-[#7575FE] text-[#7575FE] !w-max bg-black py-6 px-3"
           data-aos="fade-up"
           data-aos-duration="800"
           data-aos-delay="400"
