@@ -6,14 +6,14 @@ export default function LandingShinyAlpha() {
   return (
     <div className="w-full relative flex flex-col items-center lg:flex-row gap-6 ">
       <div className="w-fit lg:w-1/2 flex flex-col gap-5">
-        <Button className=" border-1 border-[#7575FE] text-[#7575FE] !w-max hover:bg-white py-6 px-3">
+        <Button className=" border-1 border-[#7575FE] text-[#7575FE] !w-max hover:bg-white bg-black py-6 px-3">
           آلفا درخشان
         </Button>
         <h1 className="w-fit font-bold text-white text-3xl">
           <span className="text-white ml-2">+10</span>
           سال سابقه درخشان
         </h1>
-        <p className="max-w-[46rem] font-normal text-[#555555] text-justify">
+        <p className="max-w-[46rem] font-normal text-[#a59595] text-justify">
           لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
           استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در
           ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و

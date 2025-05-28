@@ -12,7 +12,7 @@ export default function CategoryHelpText() {
         <br />
         اینجا پیدا میشه!
       </p>
-      <p className="text-[#555555]">
+      <p className="text-[#a59595]">
         با کلیک به روی هر دسته بندی می توانید تمام آگهی
         <br />
         مربوط آن را مشاهده کنید و به ملک مورد علاقه خود برسید
