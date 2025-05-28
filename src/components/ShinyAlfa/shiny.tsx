@@ -6,14 +6,14 @@ export default function LandingShinyAlpha() {
   return (
     <div className="w-full relative flex flex-col items-center lg:flex-row gap-6 ">
       <div className="w-fit lg:w-1/2 flex flex-col gap-5">
-        <Button className=" border-1 border-[#7575FE] text-[#7575FE] !w-max hover:bg-white py-6 px-3">
+        <Button className=" border-1 border-[#7575FE] text-[#7575FE] !w-max hover:bg-white bg-black py-6 px-3">
           آلفا درخشان
         </Button>
-        <h1 className="w-fit font-bold text-3xl">
-          <span className="text-primaryPurple ml-2">+10</span>
+        <h1 className="w-fit font-bold text-white text-3xl">
+          <span className="text-white ml-2">+10</span>
           سال سابقه درخشان
         </h1>
-        <p className="max-w-[46rem] font-normal text-justify">
+        <p className="max-w-[46rem] font-normal text-[#a59595] text-justify">
           لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
           استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در
           ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و
@@ -28,8 +28,9 @@ export default function LandingShinyAlpha() {
         </p>
       </div>
       <div className="relative w-full lg:w-1/2 flex justify-center items-center ">
-        <div className="absolute top-[10%] left-1/2 -z-10 w-[260px] aspect-square bg-[radial-gradient(circle,#7575FE50_0%,#7575FE50_80%,white_100%)] blur-[100px]" />
-        <div className="absolute bottom-[10%] left-[10%] -z-10 w-[200px] aspect-square bg-[radial-gradient(circle,#7575fe96_0%,#7575fe96_50%,white_100%)] blur-[100px]" />
+        <div className="absolute top-[10%] left-1/2 -z-10 w-[260px] aspect-square bg-[radial-gradient(circle,#FFFFFF_0%,#7575FE_30%,#4545FF_60%,rgba(0,0,0,0)_100%)] blur-[100px] opacity-80" />
+
+        <div className="absolute bottom-[10%] left-[10%] -z-10 w-[200px] aspect-square bg-[radial-gradient(circle,#FFFFFF_0%,#9090FF_25%,#6060FF_50%,rgba(0,0,0,0)_100%)] blur-[100px] opacity-70" />
         <Image
           src={Pic}
           alt="Description of image"
