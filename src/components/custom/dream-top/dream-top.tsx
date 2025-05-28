@@ -39,11 +39,11 @@ export function SectionTop({
                     {chipText}
                 </Button>
             )}
-            <h1 className="text-3xl font-bold whitespace-pre-line">
+            <h1 className="text-3xl font-bold text-white whitespace-pre-line">
                 {renderMultilineText(mainText)}
             </h1>
             {children || (
-                <p className="text-[#555555] dark:text-gray-400 whitespace-pre-line">
+                <p className="text-[#a59595] dark:text-gray-400 whitespace-pre-line">
                     {renderMultilineText(subText)}
                 </p>
             )}
