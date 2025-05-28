@@ -40,9 +40,9 @@ export default function Carts() {
               creator={it.sender}
               date={it.date}
               styles={{
-                parentClassName: "!bg-slate-100 border-4 border-[#7575FE]",
+                parentClassName: " border-4 border-[#7575FE] !bg-transparent",
               }}
-              className="absolute transition-all duration-500 ease-in-out !w-full md:!w-1/2  !h-max  z-20 shadow-2xl shadow-slate-500 rounded-2xl !text-slate-600"
+              className="absolute transition-all duration-500 ease-in-out !w-full md:!w-1/2  !h-max  z-20 shadow-2xl shadow-slate-500 rounded-2xl !text-slate-100"
               style={{
                 transform: `translateX(${translateX}%) scale(${scale}) `,
 
