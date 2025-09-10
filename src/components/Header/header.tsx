@@ -10,7 +10,7 @@ export default function Header() {
   const rightLinks = [LINK_ITEMS[0], LINK_ITEMS[1]];
 
   return (
-    <header className="flex items-center justify-between bg-black w-full px-5 py-4">
+    <header className="flex items-center  justify-between bg-black w-full py-4">
       <aside className="lg:flex items-center gap-4  w-full">
         <div className="flex w-full justify-between items-center text-slate-100">
           <div className="flex items-center gap-3 flex-row-reverse">
