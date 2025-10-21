@@ -1,3 +1,4 @@
+// import Pagination from "../pagination"
 import RentCard from "../Rent-Card/rent-card"
 import RentNav from "./navbar"
 import RentFilters from "./rent-filters"
@@ -8,6 +9,7 @@ const Rent = () => {
         <RentNav />
         <RentFilters />
         <RentCard />
+        {/* <Pagination currentPage={5} totalPages={10}  /> */}
         </div>
   )
 }
