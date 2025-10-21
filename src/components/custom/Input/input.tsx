@@ -13,7 +13,7 @@ type InputProps = {
 const Input = forwardRef<HTMLInputElement, InputProps>(
   ({ forgotPassword, errors, label, icon, ...props }, ref) => {
     return (
-      <div className="w-full flex flex-col gap-3 relative">
+      <div className=" flex flex-col gap-3 relative">
 
         {label && (
           <div className="w-full flex justify-between items-center">
@@ -29,7 +29,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
         )}
         <div className="relative  !w-max">
           {icon && (
-            <div className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500">
+            <div className="absolute left-1 top-1/2 -translate-y-1/2 text-gray-500">
               {icon}
             </div>
           )}

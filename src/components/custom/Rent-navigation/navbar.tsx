@@ -13,7 +13,7 @@ const RentNav = () => {
         <li>
           <a> رهن و اجاره آپارتمان</a>
         </li>
-        <li className="text-black font-bold">رهن و اجاره آپارتمان رشت</li>
+        <li className="text-white font-bold">رهن و اجاره آپارتمان رشت</li>
       </ul>
     </div>
   );
