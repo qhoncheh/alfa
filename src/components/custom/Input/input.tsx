@@ -16,8 +16,8 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
       <div className=" flex flex-col gap-3 relative">
 
         {label && (
-          <div className="w-full flex justify-between items-center">
-            <label className={`${errors ? "text-red-500" : "text-black"}`}>
+          <div className="w-full flex justify-between gap-2 items-center">
+            <label className={`${errors ? "text-red-500" : "text-white"}`}>
               {label}
             </label>
             {label === "رمزعبور" && forgotPassword && (
