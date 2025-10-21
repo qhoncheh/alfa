@@ -28,7 +28,7 @@ const HotelCard = ({ hotelName, imageUrl, address, price, stars, moreItem }: Hot
         </Button>
         <p className="text-gray-600 text-sm">{address}</p>
         <p className="text-lg font-semibold text-green-600">{price}</p>
-        <p className="text-md font-semibold text-[#7575FE] absolute bottom-4 left-4">
+        <p className="text-md font-semibold cursor-pointer text-[#7575FE] absolute bottom-4 left-4">
           {moreItem}
         </p>
       </div>
