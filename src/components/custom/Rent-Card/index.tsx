@@ -22,7 +22,7 @@ const HotelCard = ({ hotelName, imageUrl, address, price, stars, moreItem }: Hot
         />
       </div>
       <div className="flex-1 flex flex-col gap-4 p-6 relative"> 
-        <h2 className="text-xl font-bold text-gray-800">{hotelName}</h2>
+        <h2 className="text-xl font-bold text-gray-400">{hotelName}</h2>
         <Button className="bg-[#7575FE] text-white px-4 py-1 rounded-full w-fit">
           {stars} ستاره
         </Button>
