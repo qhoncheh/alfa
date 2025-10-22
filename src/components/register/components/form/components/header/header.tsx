@@ -14,7 +14,7 @@ export default function Header({ onHeaderActionClick }: HeaderProps) {
   return (
     <header className="flex flex-col  justify-between  w-full gap-6">
       <div className="flex items-center justify-between w-full">
-        <span className="text-4xl">
+        <span className="text-4xl text-[#F0F0F0]">
           {pathname === "/login" ? "خوش برگشتی!" : "ثبت نام در آلفا"}
         </span>
         <Button
@@ -31,7 +31,7 @@ export default function Header({ onHeaderActionClick }: HeaderProps) {
       </div>
       <small>
         {pathname === "send-code" ? (
-          <div className="flex flex-col gap-1">
+          <div className="flex flex-col gap-1 text-gray-200">
             <small>
               کد تایید ارسال شده به{" "}
               <small className="text-[#7575FE]">Example@gmail.com</small> را
