@@ -12,14 +12,10 @@ export default function RootLayout({
         dir="rtl"
         className="min-h-screen overflow-y-auto w-full flex bg-black flex-col justify-center items-center "
       >
-    
           <Header />
-      
         <main className=" bg-black">{children}</main>
-     
           <FooterContainer />
-       
-
+      
         <div id="modal-root"></div>
       </body>
     </html>
