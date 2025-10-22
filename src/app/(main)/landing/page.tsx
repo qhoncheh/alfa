@@ -8,6 +8,7 @@ import {
 import CategoryHelpText from "@/components/CategorySlider/categoryText";
 import Carousel from "@/components/CategorySlider/Crausol";
 import { propertyData } from "@/components/CategorySlider/data";
+import BackToTop from "@/components/custom/back-top";
 import DreamSection from "@/components/DreamDestination";
 
 const page = () => {
@@ -29,6 +30,7 @@ const page = () => {
       <LandingShinyAlpha />
       <HotDealsSlider />
       <Comments />
+      <BackToTop /> 
     </div>
   );
 };

@@ -2,14 +2,7 @@ import React from "react";
 
 export default function TextFooter() {
   return (
-    <main className="flex lg:flex-row xl:flex-nowrap flex-wrap justify-between gap-y-8">
-      <p className="lg:w-[55%] xl:w-[30%] md:w-full text-white">
-        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده
-        از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و
-        سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای
-        متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه
-        درصد گذشته حال و آینده، شناخت فراوان جامعه
-      </p>
+    <main className="flex lg:flex-row xl:flex-nowrap flex-wrap justify-between gap-y-12">
       <div className="flex flex-col gap-3 text-[#AAAAAA] md:w-[30%] xl:w-[23%] xl:mr-12 font-light">
         <p className="text-2xl text-white font-medium">نحوه رزرو اقامتگاه</p>
         <span className="hover:text-white cursor-pointer">
