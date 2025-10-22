@@ -1,4 +1,3 @@
-// components/Pagination.tsx
 import React from 'react';
 
 interface PaginationProps {
@@ -8,7 +7,6 @@ interface PaginationProps {
 }
 
 const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, onPageChange }) => {
-  // تولید آرایه شماره صفحات برای نمایش
   const getPageNumbers = () => {
     const pages = [];
     const maxPagesToShow = 5; // حداکثر تعداد دکمه‌های صفحه برای نمایش
@@ -17,7 +15,6 @@ const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, onPage
     let startPage = Math.max(1, currentPage - sidePages);
     let endPage = Math.min(totalPages, currentPage + sidePages);
 
-    // تنظیم startPage و endPage برای اطمینان از نمایش تعداد ثابت دکمه‌ها
     if (endPage - startPage + 1 < maxPagesToShow) {
       if (currentPage < totalPages / 2) {
         endPage = Math.min(totalPages, startPage + maxPagesToShow - 1);
@@ -37,7 +34,6 @@ const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, onPage
 
   return (
     <div className="flex justify-center items-center gap-2 my-4">
-      {/* دکمه صفحه قبل */}
       <button
         className="btn btn-outline btn-sm"
         onClick={() => onPageChange(currentPage - 1)}
@@ -46,7 +42,6 @@ const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, onPage
         قبلی
       </button>
 
-      {/* دکمه‌های شماره صفحات */}
       {pages.map((page) => (
         <button
           key={page}
@@ -57,7 +52,6 @@ const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, onPage
         </button>
       ))}
 
-      {/* دکمه صفحه بعد */}
       <button
         className="btn btn-outline btn-sm"
         onClick={() => onPageChange(currentPage + 1)}
