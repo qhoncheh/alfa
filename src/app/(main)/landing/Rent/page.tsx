@@ -1,6 +1,8 @@
 import Rent from "@/components/custom/Rent-navigation"
 
 
+
+
 const Rentpage = () => {
   return (
       <div>
