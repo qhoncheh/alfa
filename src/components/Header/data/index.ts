@@ -6,4 +6,6 @@ export const LINK_ITEMS: LinksType[] = [
   { id: 3, text: "درباره آلفا", link: "/landing" },
   { id: 4, text: "مقالات", link: "/landing" },
   { id: 5, text: "خانه", link: "/landing" },
+  { id: 6, text: "ثبت نام/ورود", link: "/landing/login" },
+
 ];
